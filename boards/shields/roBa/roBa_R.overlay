@@ -1,4 +1,18 @@
 #include "roBa.dtsi"
+#include <input/processors.dtsi>
+
+/* マウスレイヤー: MOUSEandARROW = レイヤー4（config/roBa.keymap の並び） */
+
+&zip_temp_layer {
+    require-prior-idle-ms = <200>;
+    excluded-positions = <18 19 21 34>;
+};
+
+&trackball_listener {
+    status = "okay";
+    device = <&trackball>;
+    input-processors = <&zip_temp_layer 4 1000>;
+};
 
 &default_transform {
     col-offset = <6>;
@@ -12,14 +26,6 @@
             , <&xiao_d 7 GPIO_ACTIVE_HIGH>
             , <&gpio0 10 GPIO_ACTIVE_HIGH>
             ;
-};
-
-/ {
-    trackball_listener {
-        status = "okay";
-        compatible = "zmk,input-listener";
-        device = <&trackball>;
-    };
 };
 
 &pinctrl {
