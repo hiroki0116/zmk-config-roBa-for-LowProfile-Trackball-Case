@@ -3,15 +3,16 @@
 
 /* マウスレイヤー: MOUSEandARROW = レイヤー4（config/roBa.keymap の並び） */
 
-&zip_temp_layer {
-    require-prior-idle-ms = <200>;
-    excluded-positions = <18 19 21 34>;
-};
+// オートマウスレイヤー無効化 - コンボでマウスクリックを行う
+// &zip_temp_layer {
+//     require-prior-idle-ms = <200>;
+//     excluded-positions = <18 19 21 34>;
+// };
 
 &trackball_listener {
     status = "okay";
     device = <&trackball>;
-    input-processors = <&zip_temp_layer 4 1000>;
+    // input-processors = <&zip_temp_layer 4 1000>;
 };
 
 &default_transform {

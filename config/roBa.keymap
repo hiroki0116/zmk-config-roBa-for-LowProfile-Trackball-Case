@@ -57,9 +57,14 @@
             key-positions = <18 19>;
         };
 
+        middle_click {
+            bindings = <&mkp MB3>;
+            key-positions = <19 20>;
+        };
+
         right_click {
             bindings = <&mkp MB2>;
-            key-positions = <19 20>;
+            key-positions = <20 21>;
         };
 
         Password {
