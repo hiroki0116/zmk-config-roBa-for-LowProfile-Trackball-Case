@@ -57,8 +57,8 @@
             key-positions = <18 19>;
         };
 
-        middle_click {
-            bindings = <&mkp MB3>;
+        scroll {
+            bindings = <&mo 5>;
             key-positions = <19 20>;
         };
 

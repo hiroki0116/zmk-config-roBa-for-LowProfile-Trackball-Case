@@ -13,6 +13,11 @@
     status = "okay";
     device = <&trackball>;
     // input-processors = <&zip_temp_layer 4 1000>;
+
+    scroll {
+        layers = <5>;
+        input-processors = <&zip_xy_to_scroll_transform>;
+    };
 };
 
 &default_transform {
@@ -65,6 +70,6 @@
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         // automouse-layer = <4>;
-        scroll-layers = <5>;
+        // scroll-layers = <5>;  // input processorで代替
     };
 };
